@@ -11,7 +11,7 @@ public class Scroll : MonoBehaviour
 
     [SerializeField] GameObject[] MapObjects;
     [SerializeField] Sprite[] MapSprites;
-    [Range(-2f,2f)]
+    // [Range(-2f,2f)]
     [SerializeField] float speed = 0.5f;
      public Vector3 initialPosition;
 

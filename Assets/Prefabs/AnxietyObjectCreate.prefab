@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5697862811557560192}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 161.01222, y: -109.43669, z: 4.007978}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -49,4 +49,4 @@ MonoBehaviour:
   - {fileID: 6521370702826057554, guid: 378d2e27dbe843f4a84a60f92c9c456c, type: 3}
   - {fileID: 1815847609746790452, guid: 25bcede265fe52b4fa2085fe747e8310, type: 3}
   PlayerTransform: {fileID: 0}
-  timer: 1
+  SkeltonTransform: {fileID: 0}

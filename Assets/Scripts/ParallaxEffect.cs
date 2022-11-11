@@ -5,18 +5,6 @@ using UnityEngine;
 
 public class ParallaxEffect : MonoBehaviour
 {
-
-
-
-
-
-
-
-
-
-
-
-
     [SerializeField] bool infiniteHorizontal = true;
     [SerializeField] bool infiniteVertical = false;
 

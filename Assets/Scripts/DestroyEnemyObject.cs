@@ -28,7 +28,7 @@ public class DestroyEnemyObject : MonoBehaviour
                 notBubble++;
                 FindObjectOfType<PlayerMovement>().Hurt();
                 Destroy(other.gameObject);
-                if (notBubble == 10)
+                if (notBubble == 4)
                 {
                     flags.AddFlag();
                     notBubble = 0;
@@ -39,7 +39,7 @@ public class DestroyEnemyObject : MonoBehaviour
                 bubble++;
                 
                 Destroy(other.gameObject);
-                if (bubble == 20)
+                if (bubble == 10)
                 {
                     flags.RemoveFlag();
                     bubble = 0;
