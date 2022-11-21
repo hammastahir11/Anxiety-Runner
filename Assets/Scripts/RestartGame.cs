@@ -11,12 +11,13 @@ public class RestartGame : MonoBehaviour
 
     public void RestartThisGame()
     {
-
+        //Application.LoadLevel(0)
         SceneManager.LoadScene(0);
-        Time.timeScale = 1f;
+       // Time.timeScale = 1f;
 
-        
+
     }
+
 
     public void Exit()
     {

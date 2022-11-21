@@ -14,14 +14,16 @@ public class ScrollBackground : MonoBehaviour
     TimeSpan time;
     int mapNumber;
     [SerializeField] int timer = 10;
-   // [SerializeField]Animator transition;
+   [SerializeField]Animator transition;
 
     void Start()
     {
          time = DateTime.Now.TimeOfDay;
          mapNumber=1;
 
+         
          StartCoroutine(ChangeBackground());
+        
     }
 
     // Update is called once per frame
@@ -33,9 +35,21 @@ public class ScrollBackground : MonoBehaviour
 
     IEnumerator ChangeBackground() {
         while (true) {
+         
             yield return new WaitForSeconds(timer);
-            image.texture = maps[mapNumber++ % maps.Length];
+        //    myfun();
+            StartCoroutine(myfun());
         }
+    }
+
+    
+
+    IEnumerator myfun()
+    {
+        transition.SetTrigger("FadeIn");
+        transition.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(0.4f);
+            image.texture = maps[mapNumber++ % maps.Length];
     }
 
 }

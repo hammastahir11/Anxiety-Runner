@@ -25,20 +25,17 @@ public class BulletDie : MonoBehaviour
        
         StartCoroutine(Timer());
         audioSource = GetComponent<AudioSource>();
-
+        
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag.Equals("enemy"))
         {
             SpriteRenderer enemy = other.gameObject.GetComponent<SpriteRenderer>();
+            
             if (enemy.sprite.name.Equals("camera"))
             {
                 HitParticel(other.gameObject);
@@ -68,6 +65,7 @@ public class BulletDie : MonoBehaviour
     {
         ParticleSystem Instace = Instantiate(particleEffect, position.transform.position, Quaternion.identity);
         Destroy(Instace.gameObject, Instace.main.duration + Instace.main.startLifetime.constantMax);
+        
     }
 
     private void OnCollisionEnter2D(Collision2D other)
