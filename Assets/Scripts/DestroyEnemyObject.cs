@@ -11,9 +11,12 @@ public class DestroyEnemyObject : MonoBehaviour
     int bubble=0;
     int notBubble = 0;
     ComplexityFlags flags;
+    BoxCollider2D cc;
+    
     private void Start()
     {
        flags = FindObjectOfType<ComplexityFlags>();
+       cc= GetComponent<BoxCollider2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -25,6 +28,7 @@ public class DestroyEnemyObject : MonoBehaviour
             SpriteRenderer enemy = other.gameObject.GetComponent<SpriteRenderer>();
             if (!enemy.sprite.name.Contains("safe"))
             {
+                
                 notBubble++;
                 FindObjectOfType<PlayerMovement>().Hurt();
                 Destroy(other.gameObject);
@@ -38,7 +42,11 @@ public class DestroyEnemyObject : MonoBehaviour
             {
                 bubble++;
                 
-                Destroy(other.gameObject);
+               Destroy(other.gameObject);
+              // cc.enabled=false;
+        
+               
+               
                 if (bubble == 10)
                 {
                     flags.RemoveFlag();

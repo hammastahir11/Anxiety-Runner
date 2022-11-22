@@ -7,8 +7,11 @@ using UnityEngine;
 public class ComplexityFlags : MonoBehaviour
 {
     [SerializeField] GameObject[] flags;
-    public static int flag_count=9;
-
+    public int flag_count=9;
+    public static ComplexityFlags Instance;
+    private void Awake() {
+        Instance=this;
+    }
     public void RemoveFlag()
     {
         flags[flag_count].SetActive(false);

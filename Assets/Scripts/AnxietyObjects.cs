@@ -24,12 +24,13 @@ public class AnxietyObjects : MonoBehaviour
     int PreviousFlag=9;
 
     DateTime time;
-    
+    ComplexityFlags complexityFlags;
   
     private void Start()
     {
         time = DateTime.UtcNow;
         yAxixSpawn = PlayerTransform.position.y;
+        complexityFlags = FindObjectOfType<ComplexityFlags>();
     }
 
     public Transform getSkeltonTransform()
@@ -43,15 +44,15 @@ public class AnxietyObjects : MonoBehaviour
     private void Update()
     {
         //Here by increasing or decreaseing the value of timer we can handle the spawning of the enemy in game.
-        if (ComplexityFlags.flag_count > currentflag)
+        if (complexityFlags.flag_count > currentflag)
         {
             timer -= 100f;
-            currentflag = ComplexityFlags.flag_count;
+            currentflag = complexityFlags.flag_count;
         }
-        if (ComplexityFlags.flag_count < currentflag)
+        if (complexityFlags.flag_count < currentflag)
         {
             timer += 100f;
-            currentflag = ComplexityFlags.flag_count;
+            currentflag = complexityFlags.flag_count;
         }
 
 
@@ -68,8 +69,8 @@ public class AnxietyObjects : MonoBehaviour
         System.Random rnd = new System.Random();
         int chooseAnxietyObjectFromList = rnd.Next(0,anxietyObjects.Count);
         
-        if(PreviousFlag!=ComplexityFlags.flag_count){
-            GenerateRandomIndexForSafeEenmy(9-ComplexityFlags.flag_count);
+        if(PreviousFlag!=complexityFlags.flag_count){
+            GenerateRandomIndexForSafeEenmy(9-complexityFlags.flag_count);
         }
         
         if(IndexArray.Contains(TotalBubleInstansiate%10)){
@@ -132,7 +133,7 @@ public class AnxietyObjects : MonoBehaviour
        // Debug.Log("The new array generated is : "+val);
         //Debug.Log("=====================================================: ");
       
-        PreviousFlag=ComplexityFlags.flag_count;
+        PreviousFlag=complexityFlags.flag_count;
     }
 
 

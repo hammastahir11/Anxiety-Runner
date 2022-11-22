@@ -1427,10 +1427,10 @@ MonoBehaviour:
   y: 0
   image: {fileID: 659574111}
   maps:
-  - {fileID: 2800000, guid: 0f1ca467a76fb234eacac8772078aaef, type: 3}
-  - {fileID: 2800000, guid: 228b11cd11a46184587aeb2953c8eedf, type: 3}
-  - {fileID: 2800000, guid: e4c921eab5414e7408d427e80ff09b5b, type: 3}
-  - {fileID: 2800000, guid: 4814823779d91dd47af3c8a8d6e26746, type: 3}
+  - {fileID: 2800000, guid: 712ac451abbb8ec45a723c4546460824, type: 3}
+  - {fileID: 2800000, guid: a4b2ade4a4b8ddb4493cafc0bf1fde23, type: 3}
+  - {fileID: 2800000, guid: 50bbadcc0a4ba4542bc91d3f4fab9562, type: 3}
+  - {fileID: 2800000, guid: 1c76e906b974d5646a9ffd60d621236c, type: 3}
   timer: 60
   transition: {fileID: 1778772322}
 --- !u!114 &659574111
@@ -1453,7 +1453,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 0f1ca467a76fb234eacac8772078aaef, type: 3}
+  m_Texture: {fileID: 2800000, guid: 712ac451abbb8ec45a723c4546460824, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1702,7 +1702,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710674994021542625, guid: f264199e2c050594b9e78270d43ef2ee, type: 3}
       propertyPath: m_Size.y
-      value: 2.9661262
+      value: 2.6492493
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710674994021542625, guid: f264199e2c050594b9e78270d43ef2ee, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2710674994021542625, guid: f264199e2c050594b9e78270d43ef2ee, type: 3}
       propertyPath: m_Offset.x
@@ -1710,7 +1714,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710674994021542625, guid: f264199e2c050594b9e78270d43ef2ee, type: 3}
       propertyPath: m_Offset.y
-      value: -2.2238832
+      value: -2.3823218
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710674994021542625, guid: f264199e2c050594b9e78270d43ef2ee, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2710674994021542631, guid: f264199e2c050594b9e78270d43ef2ee, type: 3}
       propertyPath: m_Name
@@ -4373,6 +4381,10 @@ PrefabInstance:
       value: 3.9801621
       objectReference: {fileID: 0}
     - target: {fileID: 8640346475962747017, guid: 82139f5fb84f14f498a9746d48c45adc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8640346475962747017, guid: 82139f5fb84f14f498a9746d48c45adc, type: 3}
       propertyPath: m_Offset.x
       value: -15.07959
       objectReference: {fileID: 0}
@@ -4989,7 +5001,7 @@ MonoBehaviour:
   KickBoardMovePower: 15
   jumpPower: 20
   shootSpeed: 1000
-  shootTimer: 0.3
+  shootTimer: 0.5
   shootPosition: {fileID: 809686674}
   Bullet: {fileID: 58087033450219571, guid: f43149db4e38cc9478655cdeb78cc826, type: 3}
 --- !u!95 &2002782746 stripped
@@ -5188,6 +5200,7 @@ MonoBehaviour:
   - {fileID: 1023131777}
   - {fileID: 386489620}
   - {fileID: 2083485030}
+  flag_count: 9
 --- !u!1001 &9066442404718112429
 PrefabInstance:
   m_ObjectHideFlags: 0
