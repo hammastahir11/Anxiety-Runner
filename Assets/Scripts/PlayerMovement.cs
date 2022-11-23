@@ -167,7 +167,7 @@ public class PlayerMovement : MonoBehaviour
         {
 
             //FOR WEB
-            if ((Input.GetButtonDown("Jump") || Input.GetAxisRaw("Vertical") > 0)
+            if (( Input.GetAxisRaw("Vertical") > 0)
             && !anim.GetBool("isJump"))
             {
 
@@ -216,7 +216,7 @@ public class PlayerMovement : MonoBehaviour
 
         public void Attack(bool fire=false)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1) && !isShooting)
+            if (Input.GetKeyDown(KeyCode.Space) && !isShooting)
             {
                 anim.SetTrigger("attack");
                 StartCoroutine(Shoot());

@@ -16,7 +16,7 @@ public class AnxietyObjects : MonoBehaviour
     [SerializeField] Transform PlayerTransform;
 
     [SerializeField] Transform SkeltonTransform;
-    float timer = 1000f;
+    float timer = 500f;
 
     float yAxixSpawn;
     float currentflag=9;

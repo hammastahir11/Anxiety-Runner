@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6668256472392141845, guid: e0d9bb1a0ee7bd847acaed6644af88c6, type: 3}
       propertyPath: moveSpeed
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4375844650500276378, guid: e0d9bb1a0ee7bd847acaed6644af88c6, type: 3}
       propertyPath: m_Radius
@@ -69,11 +69,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6866664920703973437, guid: e0d9bb1a0ee7bd847acaed6644af88c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.9321527
+      value: 9.49215
       objectReference: {fileID: 0}
     - target: {fileID: 6866664920703973437, guid: e0d9bb1a0ee7bd847acaed6644af88c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3080673
+      value: -1.2303543
       objectReference: {fileID: 0}
     - target: {fileID: 6866664920703973437, guid: e0d9bb1a0ee7bd847acaed6644af88c6, type: 3}
       propertyPath: m_LocalPosition.z

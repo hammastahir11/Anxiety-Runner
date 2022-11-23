@@ -11,12 +11,14 @@ public class DestroyEnemyObject : MonoBehaviour
     int bubble=0;
     int notBubble = 0;
     ComplexityFlags flags;
-    BoxCollider2D cc;
+
+    //set the position of the safe bubble which is behind the player
+    [SerializeField]public Transform changeSafeBubblePosition;
     
     private void Start()
     {
        flags = FindObjectOfType<ComplexityFlags>();
-       cc= GetComponent<BoxCollider2D>();
+       
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -42,11 +44,16 @@ public class DestroyEnemyObject : MonoBehaviour
             {
                 bubble++;
                 
-               Destroy(other.gameObject);
+            //    
+            //disable the collider of the enemy so that enemy pass from the player and latter it will be destroyed behind the playr in Follow player Script
+            //when enemy reached the player then the follow position is changed to the object behind the player 
+
+            //bubble is varible used to count the setting of redar flags 
+            other.gameObject.GetComponent<CircleCollider2D>().enabled=false;
               // cc.enabled=false;
-        
+            other.gameObject.GetComponent<FollowPlayer>().positon= changeSafeBubblePosition.position;
                
-               
+             other.gameObject.GetComponent<FollowPlayer>().check=true;  
                 if (bubble == 10)
                 {
                     flags.RemoveFlag();
