@@ -139,9 +139,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleEffect: {fileID: 582735578041874384, guid: 740a655de54785b4f9f1edc4e5a712ae, type: 3}
   dieTime: 2
-  speaker: {fileID: 21300000, guid: f5bf8535439032a45a0af9c503f815ba, type: 3}
-  sensation: {fileID: 21300000, guid: 4b548e3ec778535438c935604df37816, type: 3}
-  ccamear: {fileID: 21300000, guid: 124f906c2e9dcdc4a9d55b9806338b61, type: 3}
+  speaker: {fileID: 21300000, guid: 309f4bbedf42dc14989e59225656f634, type: 3}
+  sensation: {fileID: 21300000, guid: 7a3906fb7fcf1324e8767a2be2946dce, type: 3}
+  ccamear: {fileID: 21300000, guid: e03b94f092678324e937e675e2fa01a5, type: 3}
 --- !u!82 &5567739764976948567
 AudioSource:
   m_ObjectHideFlags: 0

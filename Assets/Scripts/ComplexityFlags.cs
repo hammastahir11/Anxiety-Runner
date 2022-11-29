@@ -24,12 +24,17 @@ public class ComplexityFlags : MonoBehaviour
 
     public void AddFlag()
     {
+        // if (flag_count == 0)
+        // {
+        //     flags[flag_count].SetActive(true);
+        // }
+        flags[flag_count].SetActive(true);
         if (flag_count != 9)
         {
-
+           // Debug.Log("Flag NO : "+flag_count);
             flag_count++;
+            
         }
-    
-        flags[flag_count].SetActive(true);
+
     }
 }

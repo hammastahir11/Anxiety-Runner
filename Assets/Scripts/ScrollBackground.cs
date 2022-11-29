@@ -14,7 +14,7 @@ public class ScrollBackground : MonoBehaviour
     TimeSpan time;
     int mapNumber;
     [SerializeField] int timer = 10;
-   [SerializeField]Animator transition;
+  // [SerializeField]Animator transition;
 
     void Start()
     {
@@ -37,7 +37,7 @@ public class ScrollBackground : MonoBehaviour
         while (true) {
          
             yield return new WaitForSeconds(timer);
-        //    myfun();
+        
             StartCoroutine(myfun());
         }
     }
@@ -46,8 +46,8 @@ public class ScrollBackground : MonoBehaviour
 
     IEnumerator myfun()
     {
-        transition.SetTrigger("FadeIn");
-        transition.SetTrigger("FadeOut");
+        //transition.SetTrigger("FadeIn");
+        //transition.SetTrigger("FadeOut");
         yield return new WaitForSeconds(0.4f);
             image.texture = maps[mapNumber++ % maps.Length];
     }
